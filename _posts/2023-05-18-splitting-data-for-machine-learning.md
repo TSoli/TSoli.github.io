@@ -1,6 +1,5 @@
-# Splitting Data for Machine Learning
-
-1. TOC
+<!-- prettier-ignore -->
+* TOC
 {:toc}
 
 ## What are Machine Learning Models?
@@ -22,7 +21,7 @@ case, it provides the system to help us find a good estimate for this function.
 
 ## What's with all of the Different Parameters?
 
-If you have read a little bit about machine learning you have probably heard the word *parameters* a
+If you have read a little bit about machine learning you have probably heard the word _parameters_ a
 lot. Broadly speaking, we can break down the parameters in a machine learning model into three
 categories: input, model and hyper - parameters.
 
@@ -99,7 +98,7 @@ indicates that the model is too expressive \(although a small generalisation gap
 the train and validation sets\). There are many techniques that can be used to reduce overfitting
 however, for this post the goal is just to point out how to identify it.
 
-### So What is a *Test* Set?
+### So What is a _Test_ Set?
 
 Ontop of the train and test sets, it is also common to reserve a test set. While the goal of the
 validation set was to ensure that the model parameters were not biased to overfit to the training
@@ -116,5 +115,5 @@ perform any hyperparameter tuning and were happy with the initial model results,
 cannot be biased towards the validation data and so a test set is not necessary. Similarly, in cases
 where the amount of data is limited, it can be hard to justify reserving a portion solely for
 testing and instead,
-[cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#:~:text=Cross%2Dvalidation%20is%20a%20resampling,model%20will%20perform%20in%20practice.)
+[cross-validation](<https://en.wikipedia.org/wiki/Cross-validation_(statistics)#:~:text=Cross%2Dvalidation%20is%20a%20resampling,model%20will%20perform%20in%20practice.>)
 is commonly used to get a good indication of the model's generalisation performance.

@@ -1,6 +1,5 @@
-# Transfer Learning
-
-1. TOC
+<!-- prettier-ignore -->
+* TOC
 {:toc}
 
 ## The Problem
@@ -39,7 +38,7 @@ vertical line and another that looks like a horizontal line. The output images f
 kernels around the input image will have larger values where we found vertical and horizontal lines,
 respectively. For those of you with a mathematical background you might be thinking this sounds more
 like cross-correlation than convolution and you would be right. That is exactly what the operation
-is and *Convolutional* Neural Network is somewhat of a misnomer in this way.
+is and _Convolutional_ Neural Network is somewhat of a misnomer in this way.
 
 ![](/images/cnn_structure.jpg "The structure of a CNN")
 

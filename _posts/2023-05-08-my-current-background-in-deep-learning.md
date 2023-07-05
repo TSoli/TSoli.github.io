@@ -1,6 +1,5 @@
-# My Current Background in Deep Learning
-
-1. TOC
+<!-- prettier-ignore -->
+* TOC
 {:toc}
 
 ## Intro

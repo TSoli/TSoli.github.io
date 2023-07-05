@@ -1,6 +1,5 @@
-# First Few Lessons
-
-1. TOC
+<!-- prettier-ignore -->
+* TOC
 {:toc}
 
 ## Some Familiar Useful Tools
@@ -35,15 +34,15 @@ be fairly easily removed with fastAI's high level API. What was more interesting
 handled the harder case which is images that load but are not valid examples. In general, cleaning
 data is important and not necessarily trivial. If you were scraping large datasets in this way you
 might spend days or weeks if you were to clean the data by going through each image individually and
-ensuring that it is valid. Instead, Jeremy takes a much more pragmatic approach. Since he is using
-a pre-trained network \(and presumably only training a small number of extra layers at the end\) and
+ensuring that it is valid. Instead, Jeremy takes a much more pragmatic approach. Since he is using a
+pre-trained network \(and presumably only training a small number of extra layers at the end\) and
 the majority of images collected are probably valid he chooses to train the model on the "dirty"
 data first. I found this quite unexpected however the reason seems to be that given most of the
-scraped images *are* valid, the model should still do fairly well at classifying the valid images.
+scraped images _are_ valid, the model should still do fairly well at classifying the valid images.
 Therefore, once it is trained, the images that were classified with the largest error are likely to
 be the invalid images. The fastAI API makes it easy to view these images and move them to a
 different category or delete them entirely if necessary. While for a large dataset it may be likely
-that *some* invalid images make it through, being able to find the worst examples efficiently like
+that _some_ invalid images make it through, being able to find the worst examples efficiently like
 this is quite clever I thought and I will keep it in mind in the future.
 
 Despite this, there are probably some limitations to this technique. If the model is not pre-trained
