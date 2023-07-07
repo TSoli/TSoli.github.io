@@ -1,3 +1,10 @@
+---
+title: An Intro to Transfer Learning
+date: 2023-05-23
+categories: [AI, Deep Learning]
+tags: [ai, machine learning, deep learning, transfer learning]     # TAG names should always be lowercase
+math: true
+---
 <!-- prettier-ignore -->
 * TOC
 {:toc}

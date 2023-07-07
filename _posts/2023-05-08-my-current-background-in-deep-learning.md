@@ -1,3 +1,9 @@
+---
+title: My Background in Deep Learning
+date: 2023-05-08
+categories: [Study, Machine Learning]
+tags: [deep learning, study]     # TAG names should always be lowercase
+---
 <!-- prettier-ignore -->
 * TOC
 {:toc}

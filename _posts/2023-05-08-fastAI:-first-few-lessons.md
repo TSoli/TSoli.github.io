@@ -1,3 +1,9 @@
+---
+title: FastAI Course - Initial Thoughts
+date: 2023-05-08
+categories: [Study, Machine Learning]
+tags: [study, ai, machine learning, data processing, fastai]     # TAG names should always be lowercase
+---
 <!-- prettier-ignore -->
 * TOC
 {:toc}
