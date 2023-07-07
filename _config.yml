@@ -20,7 +20,7 @@ timezone: "Australia/Brisbane"
 
 title: Tariq's Blog # the main title
 
-tagline: A personal blog for my Engineering study/work # it will display as the sub-title
+tagline: A student blog about my Engineering study/work # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog about mechatronics, electrical and mechanical engineering as well as

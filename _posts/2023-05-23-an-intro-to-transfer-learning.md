@@ -2,9 +2,10 @@
 title: An Intro to Transfer Learning
 date: 2023-05-23
 categories: [AI, Deep Learning]
-tags: [ai, machine learning, deep learning, transfer learning]     # TAG names should always be lowercase
+tags: [ai, machine learning, deep learning, transfer learning] # TAG names should always be lowercase
 math: true
 ---
+
 <!-- prettier-ignore -->
 * TOC
 {:toc}
@@ -47,7 +48,7 @@ respectively. For those of you with a mathematical background you might be think
 like cross-correlation than convolution and you would be right. That is exactly what the operation
 is and _Convolutional_ Neural Network is somewhat of a misnomer in this way.
 
-![](/images/cnn_structure.jpg "The structure of a CNN")
+![The structure of a CNN](/images/cnn_structure.jpg) _The structure of a CNN_
 
 Now if we define a lot of these different kernels and use them for cross-correlation over the input
 image and then define more and apply them over the output images from the previous cross-correlation
@@ -58,7 +59,7 @@ layers and potentially some other operations it applies during training \(i.e dr
 normalisation\) however understanding that it is used for feature extraction via cross-correlations
 is a fairly good simplification of the process.
 
-![](/images/cnn_features.jpg "Some examples of features extracted using filters in a CNN")
+![](/images/cnn_features.jpg) _Some examples of features extracted using filters in a CNN_
 
 So here is a picture:
 
