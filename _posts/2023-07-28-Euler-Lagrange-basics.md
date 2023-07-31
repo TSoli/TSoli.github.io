@@ -67,12 +67,12 @@ $$
 Here we have represented $s$ as a function of $y(x)$ and as such s is known as a _functional_. In
 order to find the shortest path, we must find the function $y(x)$ which minimises the functional
 $s$. So firstly, we can represent an arbitrary path $\bar{y}(x)$ between $p_1$ and $p_2$ as the
-optimal path (which we don't yet know the solution for) plus a function that varies from it
-multiplied by a scalar, $\epsilon \eta(x)$. That is,
+optimal path (which we don't yet know the solution for) plus a function that varies from it \(except
+at the endpoints\) multiplied by a small scalar, $\epsilon \eta(x)$. That is,
 
 $$
 \begin{align*}
-  \bar{y}(x) &= y(x) + \epsilon \eta(x) \\
+  \bar{y}(x) &= y(x) + \epsilon \eta(x), \quad \text{where } \eta(x_1) = \eta(x_2) = 0 \\
   \implies \frac{d \bar{y}}{dx} &= \frac{dy}{dx} + \epsilon \frac{d \eta}{dx}
 \end{align*}
 $$
@@ -156,7 +156,7 @@ $$
   0 &= \ddot{y} (1 + \dot{y})^{ - \frac{1}{2}} \\
   \implies 0 &= \ddot{y} \\
   \implies 0 &= \dot{y} + C_1 \\
-  \implies 0 &= y + C_1 x + C_2
+  \implies 0 &= y + C_1 x + C_2 \\
   \implies y &= C_1 x + C_2
 \end{align*}
 $$
@@ -185,4 +185,67 @@ $$
 
 $F$ may not always be a function of all three directly \(as was the case in the example above\) but
 for many problems it can be \(e.g problems like the brachistocrone, catenary and others
-[here](https://www.open.edu/openlearn/mod/resource/view.php?id=72745) for some examples\).
+[here](https://www.open.edu/openlearn/mod/resource/view.php?id=72745) for some examples\). Assuming
+this, we can represent our functional including the variation, $\epsilon \eta(x)$ by making the same
+substitutions as before \(i.e $\bar{y} = \epsilon \eta(x)$ and
+$\dot{\bar{y}} = \epsilon \eta(x)\). Now, for a fixed $y$ and $\eta$, $F$ is just a function of
+$\epsilon$ and since $y$ was defined as the stationary path, clearly $S[\bar{y}]$ is stationary at
+$\epsilon = 0$. That is,
+
+$$
+\frac{dF}{d\epsilon} \; \bigg\rvert_{\epsilon = 0} = \frac{d}{d\epsilon} \int_{x_1}^{x_2}
+  F(x, \bar{y}(x), \dot{\bar{y}}(x)) \; dx \; \bigg\rvert_{\epsilon = 0} = 0
+$$
+
+Now we can apply a similar process to above with Leibniz's rule,
+
+$$
+0 = \int_{x_1}^{x_2} \frac{d}{d\epsilon} F(x, \bar{y}(x), \dot{\bar{y}}(x)) \; dx
+$$
+
+And then noting that $x$ does not depend on $\epsilon$, applying the chain rule,
+
+$$
+\begin{align*}
+  \frac{dF}{d\epsilon} \bigg\rvert_{\epsilon = 0} &= \left( \frac{\partial F}{\partial \bar{y}}
+    \frac{d\bar{y}}{d\epsilon} + \frac{\partial F}{\partial \dot{\bar{y}}}
+    \frac{d\dot{\bar{y}}}{d\epsilon} \right) \; \bigg\rvert_{\epsilon = 0} \\
+  \implies \frac{dF}{d\epsilon} \bigg\rvert_{\epsilon = 0} &= \left(
+    \frac{\partial F}{\partial \bar{y}} \eta + \frac{\partial F}{\partial \dot{\bar{y}}} \dot{\eta}
+    \right) \; \bigg\rvert_{\epsilon = 0}
+\end{align*}
+$$
+
+Now as $\epsilon \rightarrow 0$, $\bar{y} \rightarrow y$ and $\dot{\bar{y}} \rightarrow \dot{y}$ so,
+
+$$
+\frac{dF}{d\epsilon} \bigg\rvert_{\epsilon = 0} =
+  \frac{\partial F}{\partial y} \eta + \frac{\partial F}{\partial \dot{y}} \dot{\eta}
+$$
+
+Now substituting that back into the functional expression we get the first variation of $F$ in its
+weak form. Then, integrating by parts,
+
+$$
+0 = \frac{\partial F}{\partial \dot{y}} \eta \; \bigg\rvert_{x_1}^{x_2} +
+  \int_{x_1}^{x_2} \left( \frac{\partial F}{\partial y} - \frac{d}{dx} \left(
+  \frac{\partial F}{\partial \dot{y}} \right) \right) \eta \; dx
+$$
+
+We know that $\eta(x_1) = \eta(x_2) = 0$ at the boundaries so clearly the first part of the
+expression vanishes. Then, because $\eta(x)$ is arbitrary, the expression it is multiplying in the
+integral must be 0. That is,
+
+$$
+\frac{d}{dx} \left( \frac{\partial F}{\partial \dot{y}} \right) - \frac{\partial F}{\partial y} = 0
+$$
+
+And this is the Euler-Lagrange equation which is much easier to use than following the whole process
+above for each problem.
+
+## Lagrangian Mechanics
+
+One set of problems that this result is very useful for is in classical mechanics.
+[The stationary-action principle](https://en.wikipedia.org/wiki/Stationary-action_principle) \(also
+known as the principle of least action\) states that trajectories of objects are stationary
+solutions to the action functional which is defined,
