@@ -1,6 +1,6 @@
 ---
 title: Variational Calculus Basics and the Euler-Lagrange Equation
-date: 2023-08-28
+date: 2023-07-28
 categories: [Mechanics, Dynamics]
 tags:
   [study, mechanics, dynamics, energy methods, Euler-Lagrange, variational calculus, mathematics]
@@ -247,5 +247,89 @@ above for each problem.
 
 One set of problems that this result is very useful for is in classical mechanics.
 [The stationary-action principle](https://en.wikipedia.org/wiki/Stationary-action_principle) \(also
-known as the principle of least action\) states that trajectories of objects are stationary
-solutions to the action functional which is defined,
+known as the principle of least action or
+[Hamilton's principle](https://en.wikipedia.org/wiki/Hamilton%27s_principle)\) states that
+trajectories of objects are stationary solutions to the action functional which is defined,
+
+$$
+S[\mathbf{q}(t)] = \int_{t_1}^{t_2} L(\mathbf{q}(t), \dot{\mathbf{q}}(t), t) \; dt
+$$
+
+where, $\mathbf{q}(t)$ is a vector of independent
+[generalised coordinates](https://en.wikipedia.org/wiki/Generalized_coordinates) for the system
+\(i.e the minimum number of coordinates required to describe the configuration of the system\) and
+$L$ is the Lagrangian defined as,
+
+$$
+L = T - V
+$$
+
+where, $T$ is the kinetic energy and $V$ is the potential energy, which are functions of
+$\dot{\mathbf{q}}$ and $\mathbf{q}$, respectively. I found out the reason for this is
+[related to quantum mechanics \(see page 6/7\)](https://scholar.harvard.edu/files/david-morin/files/cmchap6.pdf)
+which I have not studied so I won't attempt to explain it here. Anyway, applying our result from
+before,
+
+$$
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\mathbf{q}}} \right) - \frac{\partial L}{\partial \mathbf{q}} = 0
+$$
+
+In fact, if we apply this equation to the Cartesian coordinates, $\mathbf{x} = (x, y, z)$, we get,
+
+$$
+m\ddot{\mathbf{x}} = -\nabla V(x, y, z)
+$$
+
+And $-\nabla V = \mathbf{F}$. In other words,
+
+$$
+\mathbf{F} = m\mathbf{a}
+$$
+
+which, of course, is
+[Newton's second law of motion](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion). Now, $V$
+only incorporated potential energy which corresponds with
+[conservative forces](https://en.wikipedia.org/wiki/Conservative_force), which by defintion are a
+function of their position only. In many real scenarios, we also need to consider non-conservative
+forces such as friction, drag or external forces on our system that can do work. Collectively, these
+non-conservative forces can be represented as $\mathbf{Q}$ and since we just showed that the
+Euler-Lagrange equation works out to Newton's law, we can add these non-conservative forces into the
+Euler-Lagrange equation,
+
+$$
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\mathbf{q}}} \right) - \frac{\partial L}{\partial \mathbf{q}} = \mathbf{Q_i}
+$$
+
+And this is the form that we can use to easily solve many mechanics problems while still considering
+non-conservative forces on our system.
+
+## Why not use Newtonian mechanics?
+
+This seems like quite a roundabout way of getting to Newton's equations which may arguably be easier
+to use for simple one dimensional problems so what was the point? Well the big win here is that for
+problems that have multiple degrees of freedom \(that is they require many generalised coordinates
+to fully represent the configuration of the system\), Lagrange's equation is much simpler to work
+with. Consider that using Lagrange's method we are free to pick whatever set of generalised
+coordinates are natural for the problem, we then only have to calculate energies \(except for the
+non-conservative forces\) which are scalar values making it easier to avoid mistakes with direction.
+The equations of motion can then be derived analytically without much difficult geometry. As a
+result, for these more complex systems, Lagrangian mechanics are a much more practical way of
+solving problems.
+
+## Main takeaways and further reading
+
+This was quite an interesting deep dive for me. I hadn't learned about variational calculus before
+and I think it's a really cool concept. It seems to be quite beautifully applied to many natural
+phenomena so perhaps it is not the last of it I will come across. In saying that, if I made any
+mistakes or there are any super interesting insights I missed I would love to hear about it in the
+comments below. There were some things I wanted to investigate more that I cam across like
+[Hamiltonian mechanics](https://en.wikipedia.org/wiki/Hamiltonian_mechanics) and
+[D'Alembert's principle](https://en.wikipedia.org/wiki/D%27Alembert%27s_principle) but I simply did
+not have the time. Maybe that can be a topic for a future post. Either way I'll leave some
+references I found particularly useful for this topic below.
+
+- [A video on variational calculus and the Lagrange Equation](https://www.youtube.com/watch?v=VCHFCXgYdvY)
+- [A physics teaching resource from Harvard](https://scholar.harvard.edu/files/david-morin/files/cmchap6.pdf)
+- [A teaching resource on variational calculus](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiNt_eki7iAAxWYnFYBHeQ_C9YQFnoECBAQAQ&url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fmod%2Fresource%2Fview.php%3Fid%3D72745&usg=AOvVaw0v7lFBPU5E-si5LrRcpMG1&opi=89978449)
+- [A nice derivation of Lagrange's equation from Brown University](https://www.brown.edu/Departments/Engineering/Courses/En137/Lagrange.pdf)
+- Course of Theoretical Physics vol. 1 by Landau and Lifshitz
