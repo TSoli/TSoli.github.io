@@ -187,10 +187,9 @@ $F$ may not always be a function of all three directly \(as was the case in the 
 for many problems it can be \(e.g problems like the brachistocrone, catenary and others
 [here](https://www.open.edu/openlearn/mod/resource/view.php?id=72745) for some examples\). Assuming
 this, we can represent our functional including the variation, $\epsilon \eta(x)$ by making the same
-substitutions as before \(i.e $\bar{y} = \epsilon \eta(x)$ and
-$\dot{\bar{y}} = \epsilon \eta(x)\). Now, for a fixed $y$ and $\eta$, $F$ is just a function of
-$\epsilon$ and since $y$ was defined as the stationary path, clearly $S[\bar{y}]$ is stationary at
-$\epsilon = 0$. That is,
+substitutions as before \(i.e $\bar{y} = \epsilon \eta(x)$ and $\dot{\bar{y}} = \epsilon \eta(x)\)$.
+Now, for a fixed $y$ and $\eta$, $F$ is just a function of $\epsilon$ and since $y$ was defined as
+the stationary path, clearly $S[\bar{y}]$ is stationary at $\epsilon = 0$. That is,
 
 $$
 \frac{dF}{d\epsilon} \; \bigg\rvert_{\epsilon = 0} = \frac{d}{d\epsilon} \int_{x_1}^{x_2}
@@ -297,10 +296,18 @@ Euler-Lagrange equation works out to Newton's law, we can add these non-conserva
 Euler-Lagrange equation,
 
 $$
-\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\mathbf{q}}} \right) - \frac{\partial L}{\partial \mathbf{q}} = \mathbf{Q_i}
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\mathbf{q}}} \right) - \frac{\partial L}{\partial \mathbf{q}} = \mathbf{Q}
 $$
 
-And this is the form that we can use to easily solve many mechanics problems while still considering
+Now since each of the generalised coordinates were chosen to be independent we can simply use this
+equation for each coordinate to get equations of motion to be solved. I.e
+
+$$
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q_i}} \right) - \frac{\partial L}{\partial q_i} = Q_i
+$$
+
+This geenrates $i$ equations of motion of the system corresponding to the number of degrees of
+freedom. Therefore, we can use to easily solve many mechanics problems while still considering
 non-conservative forces on our system.
 
 ## Why not use Newtonian mechanics?
