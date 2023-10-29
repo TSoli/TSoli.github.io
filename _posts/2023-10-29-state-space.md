@@ -1,6 +1,6 @@
 ---
 title: State Space System Modelling
-date: 2024-10-29
+date: 2023-10-29
 categories: [Mechanics, Dynamics]
 tags:
   [
@@ -74,19 +74,72 @@ $$
 $$
 
 For some matrix $\mathbf{A} \in \mathbb{R}^{k \times k}$ where $k$ is the total number of states.
+The same can be said for discrete systems if we know the state at the next time step as a linear
+function of the current time step. These are known as difference equations as opposed to
+differential equations.
 
-## Adding Inputs
+## Inputs
 
 Often, we would like to manipulate or control our system using some external inputs that affect some
 of the states. For example, we might be able to push the accelerator in a car to apply some force
 causing it to accelerate. The chosen force will clearly affect how the car moves and will
 instantaneously affect the car's velocity. For an effective autonomous car we might like to control
-the car's position via this force.
+the car's position via this force. The affect of the input, $\mathbf{u}$ on the state derivative can
+be added in the matrix state space equation.
 
 $$
-
-
+\mathbf{\dot{x}} = \mathbf{Ax + Bu}
 $$
 
+For $k$ states and $i$ inputs $\mathbf{B} \in \mathbb{R}^{k \times i}$.
+
+## Outputs
+
+For the system we may have some desired outputs $\mathbf{Y}$ that are a function of the state and
+perhaps the current inputs. Therefore, we have
+
 $$
+\mathbf{Y} = \mathbf{Cx + Du}
 $$
+
+For $p$ outputs and $k$ states we have $\mathbf{C} \in \mathbb{R}^{p \times k}$ and for $i$ inputs
+$\mathbf{D} \in \mathbb{R}^{p \times i}$.
+
+## State and Memory
+
+Our overall system can now be described using two sets of matrix equations.
+
+$$
+\mathbf{\dot{x}} = \mathbf{Ax + Bu} \\
+\mathbf{Y} = \mathbf{Cx + Du}
+$$
+
+We can think of the system as having some components with memory that inform the current state and
+some components that are memoryless and cause an instantaneous output. The second equation
+demonstrates this well where $\mathbf{x}$ acts as the memory of the system which may cause changes
+in the output over time based on the memoryless functions parameterised by $\mathbf{A}$ and
+$\mathbf{B}$.
+
+<!-- prettier-ignore -->
+![](/images/control_system_memory.jpg) _Systems modelled as a combination of memory elements and
+memoryless components taken from <em>The Essentials of Linear State-Space Systems</em> by Aplevich_
+
+## Stability
+
+Assuming that the inputs are bounded and $\mathbf{B}$ has finite entries, the stability of the
+system will depend on if the state converges to a particular state over time for any initial state.
+This can be determined by solving the set of ODEs which we know results in a linear combination of
+exponential functions multiplied by eigenvectors $v_k$ which are themselves a linear combination of
+the originally defined states. Since there were $k$ states, there will need to be $k$ independent
+eigenvectors for the general solution.
+
+$$
+\mathbf{x}(t) = C_1 e^{\lambda_1 t} v_1 + ... + C_k e^{\lambda_k t} v_k
+$$
+
+Where $\lambda_k$ are the eigenvalues of $\mathbf{A}$ and . These eigenvectors correspond to motions
+that are independent of each other in the system and are known as the modes of system. Clearly from
+this equation the system will converge if and only if all of the real parts of the eigenvalues
+$\lambda_k$ are negative. Incidentally, these eigenvalues are also the poles of the system in the
+[Laplace domain](https://en.wikipedia.org/wiki/Laplace_transform) which we know must be negative for
+stability.
