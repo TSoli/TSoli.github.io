@@ -44,7 +44,7 @@ derivative I can update the position over some small amount of time. This allows
 derivative at the new position and so on until I have sketched out a path.
 
 <!-- prettier-ignore -->
-![](/images/simple_ode_sketch.jpg) _Sketching out a simple ODE_
+![ODE sketch](/images/simple_ode_sketch.jpg) _Sketching out a simple ODE_
 
 A general ODE is of the form,
 
@@ -121,8 +121,9 @@ in the output over time based on the memoryless functions parameterised by $\mat
 $\mathbf{B}$.
 
 <!-- prettier-ignore -->
-![](/images/control_system_memory.jpg) _Systems modelled as a combination of memory elements and
-memoryless components taken from <em>The Essentials of Linear State-Space Systems</em> by Aplevich_
+![Block diagram showing memory and memoryless components](/images/control_system_memory.jpg)
+_Systems modelled as a combination of memory elements and memoryless components taken from <em>The
+Essentials of Linear State-Space Systems</em> by Aplevich_
 
 ## Stability
 

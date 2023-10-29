@@ -41,14 +41,15 @@ the function for the minimum distance between two points in the Cartesian plane,
 and $p_2 = (x_2, y_2)$.
 
 <!-- prettier-ignore -->
-![](/images/variational_calc/shortest_path.jpg) _A 2D graph showing an arbitrary path $s$ and
-optimal path $$s_{min}$$ between two arbitrary points $$p_1$$ and $$p_2$$_
+![An arbitrary path between to points](/images/variational_calc/shortest_path.jpg) _A 2D graph
+showing an arbitrary path $s$ and optimal path $$s_{min}$$ between two arbitrary points $$p_1$$ and $$p_2$$_
 
 Firstly, we can imagine breaking an arbitrary line up into infinitesimal segments of length $ds$. At
 this scale the curvature can be considered as 0 and as such we have infinitesimal straight segments.
 Clearly, by Pythagoras' theorem, $ds = \sqrt{dx^2 + dy^2}$.
 
-![](/images/variational_calc/segment.jpg) _An infinitesimal segment of the line, $ds$_
+![A small segment of a line represented as a triangle](/images/variational_calc/segment.jpg) _An
+infinitesimal segment of the line, $ds$_
 
 Now we know that the length of the line is simply the sum of each of the inifinitesmal parts and as
 their length approaches 0 we get the integral of each of their infinitesimal parts. Therefore we

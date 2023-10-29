@@ -59,11 +59,12 @@ layers and potentially some other operations it applies during training \(i.e dr
 normalisation\) however understanding that it is used for feature extraction via cross-correlations
 is a fairly good simplification of the process.
 
-![](/images/cnn_features.jpg) _Some examples of features extracted using filters in a CNN_
+![Features picked out by CNN layers](/images/cnn_features.jpg) _Some examples of features extracted
+using filters in a CNN_
 
 So here is a picture:
 
-![](/images/cat.jpg)
+![A picture of a kitten](/images/cat.jpg)
 
 Now what is it a picture of? Hopefully if you aren't visually impaired you said a cat. Now if I
 asked you, how do you know it is a cat. After a bit of thinking you might say, well it has eyes,

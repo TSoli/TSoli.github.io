@@ -2,9 +2,10 @@
 title: Splitting Data for Machine Learning
 date: 2023-05-18
 categories: [Data Analysis, Data Preprocessing]
-tags: [ai, machine learning, data analysis, data processing]     # TAG names should always be lowercase
+tags: [ai, machine learning, data analysis, data processing] # TAG names should always be lowercase
 math: true
 ---
+
 <!-- prettier-ignore -->
 * TOC
 {:toc}
@@ -84,7 +85,7 @@ $\underset{\mathbf{w}}{\operatorname{argmin}} L((\mathbf{X}, y), \mathbf{w})$
 
 where $L$ is the specified loss function.
 
-![](/images/mlp.png)
+![A neural net showing layers of neurons](/images/mlp.png)
 
 ## Splitting Data
 
