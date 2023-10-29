@@ -47,7 +47,11 @@ derivative at the new position and so on until I have sketched out a path.
 <!-- prettier-ignore -->
 ![ODE sketch](/images/simple_ode_sketch.jpg) _Sketching out a simple ODE_
 
-A general ODE is of the form,
+Unlike frequency/Laplace methods, state-space equations can be developed for non-linear systems and
+used to form the basis of non-linear control. Despite tihs, for this post I will focus on linear
+state-space equations since they are easier to begin with.
+
+A general linear ODE is of the form,
 
 $$
 \frac{d^nx}{dt^n} = a_0 + a_1 x + ... + a_{n - 1} \frac{d^{n-1}x}{dt^{n-1}}
@@ -145,3 +149,55 @@ this equation the system will converge if and only if all of the real parts of t
 $\lambda_k$ are negative. Incidentally, these eigenvalues are also the poles of the system in the
 [Laplace domain](https://en.wikipedia.org/wiki/Laplace_transform) which we know must be negative for
 stability.
+
+## Linearisation
+
+The above formation of linear state-space equations and understanding their stability was predicated
+on them being _linear_ systems. However, real systems are always non-linear to some extent and some
+moreso than others. Despite there being techniques to handle non-linear systems, they are not nearly
+as easy and mature as for linear systems. Fortunately, in many cases, the state of the nonlinear may
+only vary over a small region and therefore can be linearised around a point. A common example of a
+nonlinear system is a frictionless pendulum modelled as a point mass with mass $m$ attached to a
+massless rod of length $L$ that can rotate about a fixed point. It's equation of motion can be
+derived as
+
+$$
+m \ddot{\theta} = -\frac{mg}{L} \sin\theta
+$$
+
+which is clearly a nonlinear.
+
+![A pendulum](/images/simple_pendulum.jpg) _A pendulum taken from <em>Britannica</em>_
+
+If we are modelling the pendulum for only small angles around some $\theta_d$ then we can use the
+first order Taylor Series expansion to linearise the system. The Taylor Series expansion around a
+point $x = a$ is
+
+$$
+f(x) = \sum_{n = 0}^\infty \frac{f^{(n)}(a)}{n!} (x - a)^n
+$$
+
+where $f^{(n)}(a)$ is the $n$th derivative of $f$ with respect to $x$ evaluated at $a$. Therefore,
+for a first order \(linear\) approximation
+
+$$
+f(x) \approx f(a) + \frac{df(a)}{dx} x
+$$
+
+Applying this to the pendulum at $\theta_d$,
+
+$$
+\ddot{\theta} = -\frac{g}{L} \cos\theta_d \; (\theta - \theta_d)
+$$
+
+And if linearising around $\theta_d = 0$ then we get
+
+$$
+\ddot{\theta} = -\frac{g}{L} \theta
+$$
+
+which is the small angle approximation that many may be familiar with.
+
+In this way, many nonlinear systems can be approximated by linear systems and the same analysis
+tools may be used for them. For highly nonlinear systems there are other methods which I may discuss
+in a later post.
