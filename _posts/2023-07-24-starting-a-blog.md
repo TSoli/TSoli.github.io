@@ -50,7 +50,7 @@ Now with that out of the way...
 
 ## What am I studying?
 
-![](/images/cute_robot.png) _A cute robot from
+![A cute robot](/images/cute_robot.png) _A cute robot from
 <https://www.analyticsvidhya.com/blog/2023/04/robot-with-chatgpt-as-its-brain-unveiled/>_
 
 Currently, I am in the second semester of my fourth year of a combined Bachelor and Masters of
