@@ -18,9 +18,9 @@ math: true
 toc: true
 ---
 
-<!-- <!-- prettier-ignore --> -->
-<!-- * TOC -->
-<!-- {:toc} -->
+<!-- prettier-ignore -->
+* TOC
+{:toc}
 
 ## Dynamical Systems
 
