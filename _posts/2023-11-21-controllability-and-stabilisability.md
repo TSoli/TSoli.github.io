@@ -2,7 +2,8 @@
 title: System Controllability and Stabilisability
 date: 2023-11-21
 categories: [Mechanics, Control]
-tags: [study, mechanics, dynamics, mathematics, control, state space, linear systems]
+tags:
+  [study, mechanics, dynamics, mathematics, control, state space, linear systems, state feedback]
 math: true
 toc: true
 ---
@@ -25,7 +26,7 @@ method that allows us to do just this.
 ![A block diagram of a system with state feedback](/images/statefeedback.jpg)
 _A block diagram of a system with state feedback_
 
-For linear systems, we can use a very simple control law, $\mathbf{u = Kx}$, and remarkably this
+For linear systems, we can use a very simple control law, $\mathbf{u = -Kx}$, and remarkably this
 allows us to choose _arbitrary_ closed loop system poles and as a result dynamics of the system. How
 is this so?
 
