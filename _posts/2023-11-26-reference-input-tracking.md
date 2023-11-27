@@ -1,6 +1,6 @@
 ---
 title: Reference Input Tracking
-date: 2023-11-23
+date: 2023-11-26
 categories: [Mechanics, Control]
 tags:
   [
