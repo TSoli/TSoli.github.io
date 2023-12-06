@@ -154,7 +154,8 @@ $$
 So this form of the system is very useful because it allows us to easily identify the dynamics of
 the system using the poles and zeros.
 
-Now consider the system with state feedback such that $\mathbf{u = Kx}$ \(note some resources use
+Now consider the system with state feedback such that $\mathbf{u = Kx}$ where
+$\mathbf{K} \in \mathbb{R}^{i \times k}$ for $i$ inputs and $k$ states \(note some resources use
 $\mathbf{u = -Kx}$ which is equivalent except that the signs of each element of $\mathbf{K}$ would
 be negated\). Then the system could be rewritten,
 
