@@ -42,7 +42,7 @@ it out below but nevertheless I will try to summarise it.
 
 So to begin, let's go over some terminology. In our previous example our hypothesis would be the
 guess that we are going to make. We want to know what the probability is that it's correct. When I
-had only told you that I am thinking of a fruit this probability would ha\ve been quite low - many
+had only told you that I am thinking of a fruit this probability would have been quite low - many
 other fruit are more common and therefore its more likely that I would be thinking about them.
 Therefore, let's say initially you assigned a probability that I am thinking of a kiwi fruit as only
 0.005 or 0.5%. We will denote the probability of this hypothesis as $P(H) = 0.005$. This initial
@@ -72,7 +72,7 @@ thinking of a kiwi fruit is $P(E|H) = 0.995$.
 
 Putting this all together we can say that the 0.5% of the time I was thinking of a kiwi fruit and
 99.5% of the time I was thinking of the kiwi fruit I would have said it was brown and furry on the
-outside. Therefore, the joint probability of these events \(the probab\ility that both occurred\) is
+outside. Therefore, the joint probability of these events \(the probability that both occurred\) is
 $likelihood \times prior = P(E|H) \cdot P(H) = 0.995 \cdot 0.005 = 0.004975$. We also know that only
 0.75% of the time I would have used this description for the evidence and so we can divide by this
 since the joint probability from before is clearly a subset of all the times this evidence was
@@ -202,7 +202,7 @@ $$
 
 Assuming we have some model for $P(\mathbf{z}|\mathbf{x})$ we can then use our odometry prediction
 as our _prior_ $P(\mathbf{x})$ as well. Then, since for all hypotheses for $\mathbf{x}$ we would
-divide by $P(\mathbf{z})$. To calcualte this we can recall,
+divide by $P(\mathbf{z})$ we can recall,
 
 $$
 P(\mathbf{z}) = P(\mathbf{z}|\mathbf{x}) \cdot P(\mathbf{x}) + P(\mathbf{z}|\bar{\mathbf{x}}) \cdot P(\bar{\mathbf{x}})
