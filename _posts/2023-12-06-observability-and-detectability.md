@@ -96,7 +96,7 @@ $$
 \end{align*}
 $$
 
-Therefore, the eigenvalues of $\mathbf{(A - LH)}$ determine how fast the error will converge and
+Therefore, the eigenvalues of $\mathbf{(A - LC)}$ determine how fast the error will converge and
 these can be controlled by choosing an appropriate $\mathbf{L}$ matrix.
 
 ## Observability and Detectability
