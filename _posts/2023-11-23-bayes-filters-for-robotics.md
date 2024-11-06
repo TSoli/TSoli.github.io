@@ -38,7 +38,7 @@ I have to start by linking [this amazing video](https://www.youtube.com/watch?v=
 explaining the maths and intuition behind Bayes Theorem intuitively and visually. Feel free to check
 it out below but nevertheless I will try to summarise it.
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/HZGCoVF3YvM" title="Bayes theorem, the geometry of changing beliefs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/HZGCoVF3YvM" title="Bayes theorem, the geometry of changing beliefs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
 So to begin, let's go over some terminology. In our previous example our hypothesis would be the
 guess that we are going to make. We want to know what the probability is that it's correct. When I
