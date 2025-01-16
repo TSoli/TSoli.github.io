@@ -245,4 +245,4 @@ convincing text that _do_ take into account the order of text.
 If you want more information about these techniques, see _Speech and Language Processing_ by
 Jurafsky and Martin. Additionally, you can have a look at my [other
 post]({% post_url 2024-11-04-word2vec %}) which discusses how neural networks were able to provide
-more convincing semantic encodings for words with Word2vec.
+more convincing semantic encodings for words with Word2vec. edit
